@@ -1,0 +1,13 @@
+Flask: A micro web framework for Python.
+Flask CORS: A Flask extension for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+pandas: A data analysis and manipulation library.
+numpy: A library for numerical computations.
+scikit-learn: A machine learning library.
+nltk: The Natural Language Toolkit, used for working with human language data.
+re: The regular expressions module (part of Python's standard library; no installation required).
+pickle: A module for serializing and de-serializing Python object structures (part of Python's standard library; no installation required).
+requests: A library for making HTTP requests.
+BeautifulSoup: A library for parsing HTML and XML documents.
+lxml: A library for processing XML and HTML (used as a parser for BeautifulSoup).
+csv: A module for handling CSV files (part of Python's standard library; no installation required).
+time: A module for time-related functions (part of Python's standard library; no installation required).
