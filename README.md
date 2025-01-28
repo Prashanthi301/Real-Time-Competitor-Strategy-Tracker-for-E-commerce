@@ -1,25 +1,51 @@
-# Real-Time-Competitor-Strategy-Tracker-for-E-commerce
- A real-time intelligence tool for e-commerce businesses
+# Real-Time Competitor Strategy Tracker for E-Commerce
+### Project Overview ### 
+This project focuses on creating a real-time competitive intelligence tool for e-commerce businesses. It provides actionable insights by monitoring competitor pricing, discount strategies, and customer sentiment. The solution leverages:
+* Machine Learning: Predictive modeling with ARIMA.
+* LLMs: Sentiment analysis using Hugging Face Transformers and Groq.
+* Integration: Slack notifications for real-time updates.
+### Features ###
+*   Competitor Data Aggregation: Track pricing and discount strategies.
+*   Sentiment Analysis: Analyze customer reviews for actionable insights.
+*   Predictive Modeling: Forecast competitor
+*   Slack Integration: Get real-time notifications on competitor activity.
+## Setup Instructions ##
+### 1. Clone Repository ###
+git clone <repository-url>
+cd <repository-directory>
+### 2. Install Dependencies ###
+Install the required Python libraries using pip:
+pip install .r requirements.txt
+### 3.Configure API Keys ###
+This project requires the following keys:
+* Groq API Key: For generating strategic redcommendations.
+* Slack Webhook URL: For sending notifications.
+### Steps: ###
 
+1. Groq API Key:
+* sign up for a Groq account at https://groq.com.
+* Obtain your API Key from the Groq dashboard.
+* Use the API Key in the app.py file.
+2. Slack Webhook Integration:
+* Go to the Slack API.
+* Create a new app and enable incoming webhooks.
+* Add a webhook to a channel and copy the generated URL.
+* Add this to URL to the app.py file.
+### 4.Run the Applications ###
+Run the Streamlit app:
+streamlit run app.py
 
-![image](https://github.com/user-attachments/assets/2a7809a0-25fb-4f34-bd22-644f89900640)
+## Project Files ##
+* app.py: Main application script.
+* scrape.py: Script for web scraping competitor data.
+* review.csv: Sample reviews data for sentiment analysis.
+* competitor_data.csv: Sample competitor data for analysis.
 
-## Project Overview
-### Goal: Create a real-time intelligence tool for e-commerce businesses.
+## Usage ##
+1. Launch the Steamlit app.
+2. Select a product from the sidebar.
+3. View competitor analysis, sentiment trends, and discount forecasts.
+4. Get strategic recommendations and real-time Slack notifications.
 
-Key Features:
-Competitor strategy analysis, Customer sentiment analysis, Real-time notifications
-
-### Impact: Develop skills in AI, ML, and LLMs
-## Why is it important
-Understanding competitor strategies is crucial in the fast-paced e-commerce world. 
-Amazon and Walmart use real-time data to optimize pricing,Businesses with AI-driven strategies often outperform competitors.
-
-## Tools and technologies
-Large Language Models (LLMs): OpenAI GPT, Meta LLaMA
-Web Scraping: BeautifulSoup, Scrapy
-Machine Learning: TensorFlow, PyTorch
-Integration Tools: Slack, APIs
-
-
-
+## License ##
+This project is licensed by MIT License.
