@@ -1,13 +1,10 @@
 Flask==2.2.3
 numpy>=1.21.0
-pandas: A data analysis and manipulation library.
-numpy: A library for numerical computations.
-scikit-learn: A machine learning library.
-nltk: The Natural Language Toolkit, used for working with human language data.
-re: The regular expressions module (part of Python's standard library; no installation required).
-pickle: A module for serializing and de-serializing Python object structures (part of Python's standard library; no installation required).
-requests: A library for making HTTP requests.
-BeautifulSoup: A library for parsing HTML and XML documents.
-lxml: A library for processing XML and HTML (used as a parser for BeautifulSoup).
-csv: A module for handling CSV files (part of Python's standard library; no installation required).
-time: A module for time-related functions (part of Python's standard library; no installation required).
+pandas==1.5.3         # Data analysis and manipulation library
+numpy==1.23.5         # Library for numerical computations
+scikit-learn==1.2.2   # Machine learning library
+nltk==3.8.1           # Natural Language Toolkit for language data
+requests==2.28.2      # HTTP requests library
+beautifulsoup4==4.11.2 # Parsing HTML and XML documents
+lxml==4.9.2           # Parser for XML and HTML
+
