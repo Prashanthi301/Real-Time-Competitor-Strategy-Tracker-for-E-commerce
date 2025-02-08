@@ -1,5 +1,5 @@
-Flask: A micro web framework for Python.
-Flask CORS: A Flask extension for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+Flask==2.2.3
+numpy>=1.21.0
 pandas: A data analysis and manipulation library.
 numpy: A library for numerical computations.
 scikit-learn: A machine learning library.
