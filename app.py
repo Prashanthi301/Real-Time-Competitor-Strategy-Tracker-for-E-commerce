@@ -30,7 +30,7 @@ SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webho
 
 selected_product = st.sidebar.selectbox(
     "Choose a product to analyze:", 
-    products, 
+    title, 
     key="product_selector"
 )
 
