@@ -28,6 +28,14 @@ API_KEY = "sk-proj-r7vgYEXGsadm9NpzWulaIK1wY-i7SFRjY4-ymTjtvVk_aDFSmUyx2S-Vg1oBa
 SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webhook url
 
 
+selected_product = st.sidebar.selectbox(
+    "Choose a product to analyze:", 
+    products, 
+    key="product_selector"
+)
+
+
+
 def truncate_text(text, max_length=512):
     return text[:max_length]
 
