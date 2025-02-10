@@ -24,6 +24,7 @@ from PIL import Image
 import pandas as pd
 import plotly.express as px
 import requests
+st.title("Welcome to the E-Commerce Competitor Strategy Dashboard")
 from openai import AzureOpenAI
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
