@@ -197,10 +197,10 @@ provide your recommendations in a structured format:
 
 
 competitor_data = load_competitor_data()
-reviews_data = load_reviews_data()
+reviews = load_reviews_data()
 
 title = competitor_data[competitor_data["title"] == selected_product]
-product_reviews = reviews_data[review_statements["title"] == selected_product]
+product_reviews = reviews[reviews["title"] == selected_product]
 
 st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
@@ -210,7 +210,7 @@ if not product_reviews.empty:
    product_reviews["review_statements"] = product_reviews["review_statements"].apply(
       lambda x: truncate_text(x, 512)
    )
-   reviews_data = product_reviews["review_statements"].tolist()
+   reviews = product_reviews["review_statements"].tolist()
    sentiments = analyze_sentiment(review_statements)
 
    st.subheader("Customer Sentiment Analysis")
@@ -252,7 +252,7 @@ selected_product = st.sidebar.selectbox("choose a product to analyze:", products
 
 
 competitor_data = load_competitor_data()
-reviews_data = load_reviews_data()
+reviews = load_reviews_data()
 
 competitor_data = competitor_data[competitor_data["title"] == selected_product]
 product_reviews = reviews[review_statements["title"] == selected_product]
