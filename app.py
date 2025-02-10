@@ -61,8 +61,9 @@ def load_reviews_data():
 
 def analyze_sentiment(reviews):
     """Analyze customer sentiment for reviews."""
-    sentiment_pipeline = pipeline("sentiment-analysis")
-    return sentiment_pipeline(reviews)
+    sentiment_pipeline = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
+    sentiments = [sentiment_pipeline(review)[0]["label"] for review in reviews]
+    return sentiments
 
 
 def train_predictive_model(data):
