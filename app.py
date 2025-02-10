@@ -16,6 +16,7 @@ from datetime import datetime
 
 from PIL import Image
 
+import torch
 import pandas as pd
 import plotly.express as px
 import requests
@@ -25,7 +26,6 @@ from openai import AzureOpenAI
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from statsmodels.tsa.arima.model import ARIMA
-from transformers import pipeline
 
 API_KEY = "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" #Groq API Key
 SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webhook url
@@ -58,7 +58,7 @@ def load_reviews_data():
     reviews = pd.read_csv("reviews.csv")
     return reviews
 
-
+from transformers import pipeline
 def analyze_sentiment(reviews):
     """Analyze customer sentiment for reviews."""
     sentiment_pipeline = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
