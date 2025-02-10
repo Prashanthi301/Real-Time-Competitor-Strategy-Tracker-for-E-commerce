@@ -197,7 +197,7 @@ provide your recommendations in a structured format:
 
 
 competitor_data = load_competitor_data()
-reviews_data = load_reviews_data()
+reviews = load_reviews()
 
 title = competitor_data[competitor_data["title"] == selected_product]
 product_reviews = reviews[review_statements["title"] == selected_product]
