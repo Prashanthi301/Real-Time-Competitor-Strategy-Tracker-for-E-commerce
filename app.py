@@ -24,7 +24,7 @@ from sklearn.model_selection import train_test_split
 from statsmodels.tsa.arima.model import ARIMA
 from transformers import pipeline
 
-API_KEY = "" #Groq API Key
+API_KEY = "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" #Groq API Key
 SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webhook url
 
 
