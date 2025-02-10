@@ -10,3 +10,4 @@ selenium
 openpyxl
 xlrd
 webdriver-manager
+openai
