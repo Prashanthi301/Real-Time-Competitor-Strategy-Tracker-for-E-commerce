@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1PSrQWM2vBBKLeqd13h1k_2NoRkM3DX2M
 """
 import streamlit as st
-
+st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
 import os
 os.system("pip install Pillow")
 
@@ -20,7 +20,6 @@ import torch
 import pandas as pd
 import plotly.express as px
 import requests
-st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
 st.title("Welcome to the E-Commerce Competitor Strategy Dashboard")
 from openai import AzureOpenAI
 from sklearn.ensemble import RandomForestRegressor
@@ -201,7 +200,7 @@ competitor_data = load_competitor_data()
 reviews_data = load_reviews_data()
 
 title = competitor_data[competitor_data["title"] == selected_product]
-product_reviews = reviews_data[reviews_data["title"] == selected_product]
+product_reviews = reviews[review_statements["title"] == selected_product]
 
 st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
@@ -212,7 +211,7 @@ if not product_reviews.empty:
       lambda x: truncate_text(x, 512)
    )
    reviews_data = product_reviews["review_statements"].tolist()
-   sentiments = analyze_sentiment(reviews_data)
+   sentiments = analyze_sentiment(review_statements)
 
    st.subheader("Customer Sentiment Analysis")
    sentiment_df = pd.DataFrame(sentiments)
@@ -239,6 +238,8 @@ competitor_data_with_predictions = forecast_discounts_arima(competitor_data)
 st.subheader("Competitor Current and Predicted Discounts")
 st.table(competitor_data_with_predictions.tail(10))
 
+
+
 recommendations = generate_strategy_recommendation(
     selected_product,
     competitor_data_with_predictions,
@@ -254,7 +255,7 @@ competitor_data = load_competitor_data()
 reviews_data = load_reviews_data()
 
 competitor_data = competitor_data[competitor_data["title"] == selected_product]
-product_reviews = reviews_data[reviews_data["title"] == selected_product]
+product_reviews = reviews[review_statements["title"] == selected_product]
 
 st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
