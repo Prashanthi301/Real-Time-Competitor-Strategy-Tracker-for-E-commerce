@@ -297,8 +297,6 @@ st.write(recommendations)
 send_to_slack(recommendations)
 
 
-!git clone https://github.com/Prashanthi301/Real-Time-Competitor-Strategy-Tracker-for-E-commerce.git
-%cd Real-Time-Competitor-Strategy-Tracker-for-E-commerce
 !pip install -r requirements.txt
 !pip install streamlit
 !npm install -g localtunnel
