@@ -12,3 +12,4 @@ xlrd
 webdriver-manager
 openai
 statsmodels
+transformers
