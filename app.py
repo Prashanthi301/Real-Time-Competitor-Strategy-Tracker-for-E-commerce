@@ -11,6 +11,8 @@ Original file is located at
 import json
 from datetime import datetime
 
+from PIL import Image
+
 import pandas as pd
 import plotly.express as px
 import requests
