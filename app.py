@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1PSrQWM2vBBKLeqd13h1k_2NoRkM3DX2M
 """
 
-!pip install statsmodels 
-!pip install transformers
+pip install statsmodels 
+pip install transformers
 
 import os
 os.system("pip install Pillow")
