@@ -1,4 +1,5 @@
 streamlit
+transformers
 pandas
 numpy
 matplotlib
@@ -12,4 +13,4 @@ xlrd
 webdriver-manager
 openai
 statsmodels
-transformers
+
