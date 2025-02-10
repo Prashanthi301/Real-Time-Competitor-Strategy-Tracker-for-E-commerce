@@ -296,10 +296,3 @@ st.subheader("Strategic Recommendations")
 st.write(recommendations)
 send_to_slack(recommendations)
 
-
-!pip install -r requirements.txt
-!pip install streamlit
-!npm install -g localtunnel
-!npx localtunnel --port 8501
-!npm fund
-!streamlit run app.py & npx localtunnel --port 8501
