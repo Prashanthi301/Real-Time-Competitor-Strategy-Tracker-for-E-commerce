@@ -7,6 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1PSrQWM2vBBKLeqd13h1k_2NoRkM3DX2M
 """
 !pip install Pillow
+!pip install --upgrade pip setuptools wheel
+!pip install --no-cache-dir Pillow
+
 
 import json
 from datetime import datetime
