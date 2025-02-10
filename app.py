@@ -292,6 +292,13 @@ competitor_data_with_predictions = forecast_discounts_arima(competitor_data)
 st.subheader("Competitor Current and Predicted Discounts")
 st.table(competitor_data_with_predictions.tail(10))
 
+if "review_statements" in product_reviews.columns:
+    reviews = product_reviews["review_statements"].tolist()
+else:
+    st.error("The 'review_statements' column is missing from the dataset.")
+    reviews = []
+
+
 recommendations = generate_strategy_recommendation(
     selected_product,
     competitor_data_with_predictions,
