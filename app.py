@@ -7,7 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1PSrQWM2vBBKLeqd13h1k_2NoRkM3DX2M
 """
 
+!pip install statsmodels transformers
 
+import os
+os.system("pip install Pillow")
 
 import json
 from datetime import datetime
@@ -30,7 +33,7 @@ SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webho
 
 selected_product = st.sidebar.selectbox(
     "Choose a product to analyze:", 
-    title, 
+    products, 
     key="product_selector"
 )
 
