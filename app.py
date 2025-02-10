@@ -29,9 +29,9 @@ from transformers import pipeline
 API_KEY = "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" #Groq API Key
 SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webhook url
 
-products = [Sony PS4 Slim 1 TB Console
-, PS4 GOW HITS
-, Ps4 slim 500 gb,
+products = ["Sony PS4 Slim 1 TB Console"
+, "PS4 GOW HITS"
+, "Ps4 slim 500 gb",
 ]  # Replace with actual data
 
 selected_product = st.sidebar.selectbox(
