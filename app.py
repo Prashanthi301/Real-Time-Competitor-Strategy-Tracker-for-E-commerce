@@ -127,7 +127,7 @@ st.table(competitor_data)
 
 # Sentiment analysis
 if not product_reviews.empty:
-    reviews = product_reviews["reviews"].apply(truncate_text).tolist()
+    reviews = product_reviews["review_statements"].apply(truncate_text).tolist()
     sentiments = analyze_sentiment(reviews)
 
     st.subheader("Customer Sentiment Analysis")
