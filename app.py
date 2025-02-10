@@ -30,7 +30,7 @@ API_KEY = "sk-proj-Pyw9DQ5rTMBWRcOcOF6o_v26onY2pNf1apLX8g0FahiCdvV3LSezuxzefmmc0
 SLACK_WEBHOOK = "https://hooks.slack.com/services/your/webhook/url" #Slack webhook url
 
 products = [Sony PS4 Slim 1 TB Console
-, Sony PlayStationÂ®5 Digital Edition (slim)
+, PS4 GOW HITS
 , Ps4 slim 500 gb
 ]  # Replace with actual data
 
