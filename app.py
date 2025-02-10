@@ -8,11 +8,6 @@ Original file is located at
 """
 import streamlit as st
 
-st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
-
-# Rest of your script
-
-
 import os
 os.system("pip install Pillow")
 
@@ -24,6 +19,7 @@ from PIL import Image
 import pandas as pd
 import plotly.express as px
 import requests
+st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
 st.title("Welcome to the E-Commerce Competitor Strategy Dashboard")
 from openai import AzureOpenAI
 from sklearn.ensemble import RandomForestRegressor
@@ -198,16 +194,6 @@ provide your recommendations in a structured format:
 
 
 ####----------------------------------------------#############
-
-st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
-
-
-st.title("E-Commerce Competitor Dashboard")
-st.sidebar.header("select a product")
-
-products = [
-]
-selected_product = st.sidebar.selectbox("choose a product to analyze:", products)
 
 
 competitor_data = load_competitor_data()
