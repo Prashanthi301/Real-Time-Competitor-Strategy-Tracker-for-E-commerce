@@ -207,11 +207,11 @@ st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
 if not product_reviews.empty:
-   product_reviews["review_statements"] = product_reviews["review_statements"].apply(
+   product_reviews["reviews"] = product_reviews["reviews"].apply(
       lambda x: truncate_text(x, 512)
    )
-   reviews = product_reviews["review_statements"].tolist()
-   sentiments = analyze_sentiments(review_statements)
+   reviews = product_reviews["reviews"].tolist()
+   sentiments = analyze_sentiment(reviews)
 
    st.subheader("Customer Sentiment Analysis")
    sentiment_df = pd.DataFrame(sentiments)
