@@ -193,7 +193,7 @@ competitor_data = load_competitor_data()
 reviews = load_reviews()
 
 title = competitor_data[competitor_data["title"] == selected_product]
-reviews = reviews[review_statements["title"] == selected_product]
+reviews = reviews[reviews["title"] == selected_product]
 
 st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
