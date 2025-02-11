@@ -60,6 +60,30 @@ def analyze_sentiment(text):
     else:
         return 'Neutral'
 
+import pandas as pd
+
+# Load your CSV file into a DataFrame
+df = pd.read_csv('reviews.csv')
+
+# Ensure the 'review_statements' column exists
+if 'review_statements' in df.columns:
+    # Apply the analyze_sentiment function to each review statement
+    df['Sentiment'] = df['review_statements'].apply(analyze_sentiment)
+else:
+    print("The 'review_statements' column is not present in the DataFrame.")
+    
+    print(df.columns)
+
+import streamlit as st
+
+# Display the DataFrame with sentiments
+st.write(df)
+
+# Optionally, display the count of each sentiment
+sentiment_counts = df['Sentiment'].value_counts()
+st.bar_chart(sentiment_counts)
+
+
 from transformers import pipeline
 def analyze_sentiment(reviews):
     """Analyze customer sentiment for reviews."""
