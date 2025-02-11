@@ -200,7 +200,7 @@ st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
 if not reviews.empty:
-   reviews["reviews"] = product_reviews["reviews"].apply(
+   reviews["reviews"] = reviews["reviews"].apply(
       lambda x: truncate_text(x, 512)
    )
    reviews = reviews["reviews"].tolist()
