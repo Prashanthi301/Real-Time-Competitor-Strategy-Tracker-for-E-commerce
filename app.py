@@ -259,7 +259,7 @@ if not reviews.empty:
       lambda x: truncate_text(x, 512)
    )
    reviews = reviews["reviews"].tolist()
-   sentiments = analyze_sentiment(reviews)
+   sentiments = analyze_sentiment(review_statements)
 
    st.subheader("Customer Sentiment Analysis")
    sentimentdf = pd.DataFrame(sentiments)
