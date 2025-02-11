@@ -3,6 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="E-Commerce Competitor Strategy Dashboard", layout="wide")
 import os
 os.system("pip install Pillow")
+from sentiment_module import analyze_sentiment
 
 import json
 from datetime import datetime
@@ -49,6 +50,16 @@ def load_reviews():
     """Load reviews data from a CSV file."""
     reviews = pd.read_csv("reviews.csv")
     return reviews
+from textblob import TextBlob
+
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    if blob.sentiment.polarity > 0:
+        return 'Positive'
+    elif blob.sentiment.polarity < 0:
+        return 'Negative'
+    else:
+        return 'Neutral'
 
 from transformers import pipeline
 def analyze_sentiment(reviews):
