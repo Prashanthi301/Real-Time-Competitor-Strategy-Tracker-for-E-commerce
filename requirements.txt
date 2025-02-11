@@ -1,5 +1,6 @@
 streamlit
 textblob
+sentiment_module
 torch
 tensorflow
 transformers
