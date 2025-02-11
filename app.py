@@ -68,7 +68,7 @@ df = pd.read_csv('reviews.csv')
 # Ensure the 'review_statements' column exists
 if 'review_statements' in df.columns:
     # Apply the analyze_sentiment function to each review statement
-    df['Sentiment'] = df['review_statements'].apply(analyze_sentiment)
+    df['sentiment'] = df['review_statements'].apply(analyze_sentiment)
 else:
     print("The 'review_statements' column is not present in the DataFrame.")
     
@@ -80,7 +80,7 @@ import streamlit as st
 st.write(df)
 
 # Optionally, display the count of each sentiment
-sentiment_counts = df['Sentiment'].value_counts()
+sentiment_counts = df['sentiment'].value_counts()
 st.bar_chart(sentiment_counts)
 
 
