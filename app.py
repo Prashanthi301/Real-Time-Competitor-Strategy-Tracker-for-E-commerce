@@ -50,8 +50,7 @@ def load_reviews():
     """Load reviews data from a CSV file."""
     reviews = pd.read_csv("reviews.csv")
     return reviews
-from textblob import TextBlob
-from sentiment_module import analyze_sentiment
+
 def analyze_sentiment(text):
     blob = TextBlob(text)
     if blob.sentiment.polarity > 0:
