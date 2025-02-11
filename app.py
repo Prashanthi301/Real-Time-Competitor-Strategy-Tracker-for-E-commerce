@@ -265,7 +265,7 @@ st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
 if not reviews.empty:
-   reviews["reviews"] = reviews["reviews"].apply(
+   reviews["review_statements"] = reviews["review_statements"].apply(
       lambda x: truncate_text(x, 512)
    )
    reviews = reviews["reviews"].tolist()
@@ -296,7 +296,7 @@ competitor_data_with_predictions = forecast_discounts_arima(competitor_data)
 st.subheader("Competitor Current and Predicted Discounts")
 st.table(competitor_data_with_predictions.tail(10))
 
-if "review_statements" in product_reviews.columns:
+if "review_statements" in reviews.columns:
     reviews = reviews["review_statements"].tolist()
 else:
     st.error("The 'review_statements' column is missing from the dataset.")
