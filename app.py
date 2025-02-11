@@ -199,7 +199,7 @@ st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
-if not review_statements.empty:
+if not reviews.empty:
    reviews["review_statements"] = reviews["review_statements"].apply(
       lambda x: truncate_text(x, 512)
    )
