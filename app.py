@@ -199,11 +199,11 @@ st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
-if not product_reviews.empty:
-   product_reviews["reviews"] = product_reviews["reviews"].apply(
+if not reviews.empty:
+   reviews["reviews"] = product_reviews["reviews"].apply(
       lambda x: truncate_text(x, 512)
    )
-   reviews = product_reviews["reviews"].tolist()
+   reviews = reviews["reviews"].tolist()
    sentiments = analyze_sentiment(reviews)
 
    st.subheader("Customer Sentiment Analysis")
@@ -248,17 +248,17 @@ competitor_data = load_competitor_data()
 reviews = load_reviews_data()
 
 competitor_data = competitor_data[competitor_data["title"] == selected_product]
-product_reviews = reviews[review_statements["title"] == selected_product]
+reviews = reviews[reviews["title"] == selected_product]
 
 st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
-if not product_reviews.empty:
-   product_reviews["reviews"] = product_reviews["reviews"].apply(
+if not reviews.empty:
+   reviews["reviews"] = reviews["reviews"].apply(
       lambda x: truncate_text(x, 512)
    )
-   reviews = product_reviews["reviews"].tolist()
+   reviews = reviews["reviews"].tolist()
    sentiments = analyze_sentiment(reviews)
 
    st.subheader("Customer Sentiment Analysis")
@@ -287,7 +287,7 @@ st.subheader("Competitor Current and Predicted Discounts")
 st.table(competitor_data_with_predictions.tail(10))
 
 if "review_statements" in product_reviews.columns:
-    reviews = product_reviews["review_statements"].tolist()
+    reviews = reviews["review_statements"].tolist()
 else:
     st.error("The 'review_statements' column is missing from the dataset.")
     reviews = []
