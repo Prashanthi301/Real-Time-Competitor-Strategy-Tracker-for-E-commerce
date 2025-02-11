@@ -45,7 +45,7 @@ def load_competitor_data():
      return data
 
 
-def load_reviews_data():
+def load_reviews():
     """Load reviews data from a CSV file."""
     reviews = pd.read_csv("reviews.csv")
     return reviews
