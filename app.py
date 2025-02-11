@@ -199,11 +199,11 @@ st.header(f"Competitor Analysis for {selected_product}")
 st.subheader("Competitor Data")
 st.table(competitor_data.tail(5))
 
-if not reviews.empty:
-   reviews["reviews"] = reviews["reviews"].apply(
+if not review_statements.empty:
+   reviews["review_statements"] = reviews["review_statements"].apply(
       lambda x: truncate_text(x, 512)
    )
-   reviews = reviews["reviews"].tolist()
+   reviews = reviews["review_statements"].tolist()
    sentiments = analyze_sentiment(reviews)
 
    st.subheader("Customer Sentiment Analysis")
