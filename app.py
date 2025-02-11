@@ -54,7 +54,7 @@ from transformers import pipeline
 def analyze_sentiment(reviews):
     """Analyze customer sentiment for reviews."""
     sentiment_pipeline = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
-    sentiments = [sentiment_pipeline(review)[0]["label"] for review in reviews]
+    sentiments = [sentiment_pipeline(review_statements)[0]["label"] for review_statements in reviews]
     return sentiments
 
 
