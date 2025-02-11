@@ -2,8 +2,6 @@ streamlit
 torch
 tensorflow
 transformers
-textblob
-sentiment_module
 pandas
 numpy
 matplotlib
