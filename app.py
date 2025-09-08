@@ -22,8 +22,8 @@ from datetime import datetime  # Handling dates and timestamps
 import json  # Handling JSON data
 
 
-GROQ_API_KEY = "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" # Groq API Key
-SLACK_WEBHOOK_API_KEY = "https://hooks.slack.com/services/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" # Slack Webhook url
+GROQ_API_KEY = "GROQ_API_KEY" # Groq API Key
+SLACK_WEBHOOK_API_KEY = "SLACK_WEBHOOK_API_KEY" # Slack Webhook url
 
 
 def truncate_text(text, max_length=512):
