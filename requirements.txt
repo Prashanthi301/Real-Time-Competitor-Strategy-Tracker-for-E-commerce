@@ -1,0 +1,11 @@
+streamlit
+plotly
+huggingface-hub
+transformers
+scikit-learn
+statsmodels
+pandas
+numpy
+matplotlib
+requests
+torch 
